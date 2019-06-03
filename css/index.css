@@ -249,6 +249,13 @@ main {
 	padding-top: 20px;
 }
 
+@media(max-width: 500px) {
+  main,footer, .contact {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 
 .middle-img {
 	display: inline-block;
@@ -298,6 +305,7 @@ main {
 
 .contact {
 	margin-top: 20px;
+  padding: 10px;
 }
 
 .email {
@@ -317,6 +325,7 @@ main {
 	margin: 30px;
 	margin-bottom: 80px;
 }
+
 
 /*services css starts here */
 
