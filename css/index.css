@@ -63,10 +63,23 @@ h1, h2, h3, h4, h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 body {
-margin-left:8%;
-margin-right:8%;
-margin-bottom:3%;
-margin-top:3%;
+  width: 960px;
+ /* TB LR */
+ margin: 0 auto;
+}
+
+@media(max-width: 800px) {
+  body {
+    width: 760px;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 500px) {
+  body {
+    width: 450px;
+    margin: 0 auto;
+  }
 }
 
 nav {
@@ -77,6 +90,21 @@ nav {
 	 height: 60px;
 	 vertical-align: middle;
 	 margin-top: 60px;
+ }
+
+ @media(max-width: 800px) {
+   nav {
+     display: flex;
+     flex-direction: column-reverse;
+   }
+ }
+
+ @media(max-width: 500px) {
+   nav {
+     background: none;
+     display: flex;
+     flex-direction: column-reverse;
+   }
  }
 
 nav a {
@@ -90,6 +118,23 @@ nav a {
 	 align-items: center;
  }
 
+ @media(max-width: 500px) {
+   nav a {
+     border-bottom: 1px solid gray;
+     margin: 0 0 0 0;
+     display: flex;
+     align-content: center;
+     border: 1px solid red;
+   }
+ }
+
+
+.anchors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
  nav a:hover {
   color: indigo;
 	font-weight: bold;
@@ -99,11 +144,37 @@ nav a:first-child {
   margin-left: 0;
 }
 
+@media(max-width: 800px) {
+  .anchors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media(max-width: 500px) {
+  .anchors {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
 
  .logo {
 	 display: flex;
-	 justify-content: center;
+   flex-direction: row;
+	 justify-content: flex-end;
  }
+
+ @media(max-width: 800px) {
+   .logo {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+   }
+ }
+
 
 header {
 	margin: 0px 10px 30px 10px;
@@ -142,12 +213,25 @@ button {
 	margin: 20px;
 }
 
+@media(max-width: 800px) {
+  .hero-image {
+    display:none;
+  }
+}
+
+@media(max-width: 500px) {
+  .hero-image {
+    display: none;
+  }
+}
+
 main {
 	border-bottom: 1px solid black;
 	border-top: 1px solid black;
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
+
 
 .middle-img {
 	display: inline-block;
@@ -160,6 +244,14 @@ main {
 	display: flex;
 }
 
+@media(max-width: 500px) {
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
 .sectionsub1 {
 	display: flex;
 	flex-direction: column;
@@ -170,6 +262,14 @@ main {
 .section2 {
 	display: flex;
 	flex-direction: row;
+}
+
+@media(max-width: 500px) {
+  .section2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 .sectionsub2 {
@@ -256,4 +356,9 @@ button {
 
 li {
 	padding-top: 10px;
+}
+
+/*responsive section */
+
+
 }
